@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 
+######################################################################
+# 🧰 ThreatCode/Dotfiles - All-in-One Install  Script for Unix       #
+######################################################################
+# Fetches latest changes, symlinks files, and installs dependencies  #
+# Then sets up ZSH, TMUX, Vim as well as OS-specific tools and apps  #
+# Checks all dependencies are met, and prompts to install if missing #
+#                                                                    #
+# OPTIONS:                                                           #
+#   --auto-yes: Skip all prompts, and auto-accept all changes        #
+#   --no-clear: Don't clear the screen before running                #
+#                                                                    #
+# ENVIRONMENTAL VARIABLES:                                           #
+#   DOTFILES_DIR: Where to save dotfiles to (default: ~/.dotfiles)   #
+#   DOTFILES_REPO: Git repo to USE (default: threatcode/Dotfiles)    #
+#                                                                    #
+# IMPORTANT: Before running, read through everything very carefully! #
+######################################################################
+
 # Set variables for reference
 PARAMS=$* # User-specified parameters
 CURRENT_DIR=$(cd "$(dirname ${BASH_SOURCE[0]})" && pwd)
