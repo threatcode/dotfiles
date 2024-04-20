@@ -7,8 +7,7 @@ alias_not_used () {
   ! alias "$1" >/dev/null && ! hash "$1" 2> /dev/null
 }
 
-# Single-letter aliases, for frequently used basics, only if not already 
-set
+# Single-letter aliases, for frequently used basics, only if not already set
 if alias_not_used a; then; alias a='alias'; fi
 if alias_not_used c; then; alias c='clear'; fi
 if alias_not_used d; then; alias c='date'; fi
@@ -112,17 +111,13 @@ alias cg='cd `git rev-parse --show-toplevel`' # Base of git project
 # Finding files and directories
 alias dud='du -d 1 -h' # List sizes of files within directory
 alias duf='du -sh *' # List total size of current directory
-alias ff='find . -type f -name' # Find a file by name within current 
-directory
-(( $+commands[fd] )) || alias fd='find . -type d -name' # Find direcroy by 
-name
+alias ff='find . -type f -name' # Find a file by name within current directory
+(( $+commands[fd] )) || alias fd='find . -type d -name' # Find direcroy by name
 
 # Command line history
 alias h='history' # Shows full history
-alias h-search='fc -El 0 | grep' # Searchses for a word in terminal 
-history
-alias top-history='history 0 | awk '{print $2}' | sort | uniq -c | sort -n 
--r | head' 
+alias h-search='fc -El 0 | grep' # Searchses for a word in terminal history
+alias top-history='history 0 | awk '{print $2}' | sort | uniq -c | sort -n -r | head' 
 alias histrg='history -500 | rg' # Rip grep search recent history
 
 # Clearing terminal
@@ -142,8 +137,7 @@ alias -g LL="2>&1 | less" # Writes stderr to stdout and passes it to less
 alias -g CA="2>&1 | cat -A" # Writes stderr to stdout and passes it to cat
 alias -g NE="2> /dev/null" # Silences stderr
 alias -g NUL="> /dev/null 2>&1" # Silences both stdout and stderr
-alias -g P="2>&1| pygmentize -l pytb" # Writes stderr to stdout, and 
-passes to pygmentize
+alias -g P="2>&1| pygmentize -l pytb" # Writes stderr to stdout, and passes to pygmentize
 
 # Use color diff, if availible
 if command_exists colordiff ; then
@@ -157,10 +151,8 @@ alias ar='unalias' # Remove given alias
 
 # System Monitoring
 alias meminfo='free -m -l -t' # Show free and used memory
-alias memhog='ps -eo pid,ppid,cmd,%mem --sort=-%mem | head' # Processes 
-consuming most mem
-alias cpuhog='ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head' # Processes 
-consuming most cpu
+alias memhog='ps -eo pid,ppid,cmd,%mem --sort=-%mem | head' # Processes consuming most mem
+alias cpuhog='ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head' # Processes consuming most cpu
 alias cpuinfo='lscpu' # Show CPU Info
 alias distro='cat /etc/*-release' # Show OS info
 alias ports='netstat -tulanp' # Show open ports
@@ -170,8 +162,7 @@ alias cpwd='pwd | pbcopy' # Copy current path
 alias pa='pbpaste' # Paste clipboard contents
 
 # App Specific
-if command_exists code ; then; alias vsc='code .'; fi # Launch VS Code in 
-current dir
+if command_exists code ; then; alias vsc='code .'; fi # Launch VS Code in current dir
 if command_exists cointop ; then; alias crypto='cointop'; fi
 if command_exists gotop ; then; alias gto='gotop'; fi
 
@@ -187,8 +178,7 @@ alias worldinternet='curl https://status.plaintext.sh/t'
 
 # Random lolz
 alias cls='clear;ls' # Clear and ls
-alias plz="fc -l -1 | cut -d' ' -f2- | xargs sudo" # Re-run last cmd as 
-root
+alias plz="fc -l -1 | cut -d' ' -f2- | xargs sudo" # Re-run last cmd as root
 alias yolo='git add .; git commit -m "YOLO"; git push origin master'
 alias when='date' # Show date
 alias whereami='pwd'
@@ -196,6 +186,5 @@ alias dog='cat'
 alias gtfo='exit'
 
 # Alias for install script
-alias 
-dotfiles="${DOTFILES_DIR:-$HOME/Documents/config/dotfiles}/install.sh"
+alias dotfiles="${DOTFILES_DIR:-$HOME/Documents/config/dotfiles}/install.sh"
 alias dots="dotfiles"

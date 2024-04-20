@@ -89,8 +89,7 @@ if [[ -d "$PYENV_ROOT" ]] && \
 fi
 
 # If using Tilix, import the shell integration if availible
-if [ $TILIX_ID ] || [ $VTE_VERSION ] && [[ -f "/etc/profile.d/vte.sh" ]]; 
-then
+if [ $TILIX_ID ] || [ $VTE_VERSION ] && [[ -f "/etc/profile.d/vte.sh" ]]; then
   source /etc/profile.d/vte.sh
 fi
 

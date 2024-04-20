@@ -1,3 +1,4 @@
+
 ######################################################################
 # ZSH aliases for common Flutter + Dart dev commands                 #
 # Inspired by ohmyzsh/flutter and hadenlabs/zsh-flutter              #
@@ -6,8 +7,7 @@
 # Main fultter command
 alias fl="flutter"
 
-# Attaches flutter to a running flutter application with enabled 
-observatory
+# Attaches flutter to a running flutter application with enabled observatory
 alias flattach="flutter attach"
 
 # Build flutter application

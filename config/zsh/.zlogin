@@ -5,8 +5,7 @@
 # Credit @htr3n. More info: https://htr3n.github.io/2018/07/faster-zsh/
 {
     zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
-    if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt 
-"${zcompdump}.zwc") ]];
+    if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]];
     then
         zcompile "$zcompdump"
     fi

@@ -1,0 +1,4 @@
+threatcode/Brewfile:
+  - source: scripts/installs/Brewfile
+    dest: Brewfile
+  

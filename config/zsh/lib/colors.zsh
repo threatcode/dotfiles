@@ -14,12 +14,9 @@ fi
 
 # Add auto color to certain commands
 # alias vdir="vdir --color=auto"      # Colorize 'vdir' command.
-# alias grep="grep --color=auto -i"   # Colorize 'grep' command and ignore 
-case.
-# alias fgrep="grep --color=auto -i"  # Colorize 'fgrep' command and 
-ignore case.
-# alias egrep="grep --color=auto -i"  # Colorize 'egrep' command and 
-ignore case.
+# alias grep="grep --color=auto -i"   # Colorize 'grep' command and ignore case.
+# alias fgrep="grep --color=auto -i"  # Colorize 'fgrep' command and ignore case.
+# alias egrep="grep --color=auto -i"  # Colorize 'egrep' command and ignore case.
 # alias diff="diff --color=auto"      # Colorize 'diff' command.
 
 # Color strings for basic file types
@@ -38,8 +35,7 @@ ignore case.
 # SETUID 37;41 # file that is setuid (u+s)
 # SETGID 30;43 # file that is setgid (g+s)
 # CAPABILITY 30;41 # file with capability
-# STICKY_OTHER_WRITABLE 01;42 # dir that is sticky and other-writable 
-(+t,o+w)
+# STICKY_OTHER_WRITABLE 01;42 # dir that is sticky and other-writable (+t,o+w)
 # OTHER_WRITABLE 01;32 # dir that is other-writable (o+w) and not sticky
 # STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # EXEC 01;32 # Files with execute permission

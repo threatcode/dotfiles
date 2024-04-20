@@ -1,7 +1,6 @@
 
 # Expands all glob expressions, subcommands and aliases (including global)
-# Inspired by: 
-https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/globalias
+# Inspired by: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/globalias
 
 globalias() {
   # Get last word to the left of the cursor, and split into array

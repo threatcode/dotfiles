@@ -30,8 +30,7 @@ GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 
 # Clear the screen
-if [[ ! $PARAMS == *"--no-clear"* ]] && [[ ! $PARAMS == *"--help"* ]] ; 
-then
+if [[ ! $PARAMS == *"--no-clear"* ]] && [[ ! $PARAMS == *"--help"* ]] ; then
   clear
 fi
 
@@ -49,10 +48,8 @@ make_banner () {
   padding="${3:-0}"
   titleLen=$(expr ${#bannerText} + 2 + $padding);
   lineChar="─"; line=""
-  for (( i = 0; i < "$titleLen"; ++i )); do line="${line}${lineChar}"; 
-done
-  banner="${lineColor}╭${line}╮\n│ ${PLAIN_B}${bannerText}${lineColor} 
-│\n╰${line}╯"
+  for (( i = 0; i < "$titleLen"; ++i )); do line="${line}${lineChar}"; done
+  banner="${lineColor}╭${line}╮\n│ ${PLAIN_B}${bannerText}${lineColor} │\n╰${line}╯"
   echo -e "\n${banner}\n${RESET}"
 }
 
@@ -62,10 +59,8 @@ make_intro () {
   C3="\x1b[2m"
   echo -e "${CYAN_B}The seup script will do the following:${RESET}\n"\
   "${C2}(1) Pre-Setup Tasls\n"\
-  "  ${C3}- Check that all requirements are met, and system is 
-compatible\n"\
-  "  ${C3}- Sets environmental variables from params, or uses sensible 
-defaults\n"\
+  "  ${C3}- Check that all requirements are met, and system is compatible\n"\
+  "  ${C3}- Sets environmental variables from params, or uses sensible defaults\n"\
   "  ${C3}- Output welcome message and summary of changes\n"\
   "${C2}(2) Setup Dotfiles\n"\
   "  ${C3}- Clone or update dotfiles from git\n"\
@@ -75,10 +70,8 @@ defaults\n"\
   "  ${C3}- On MacOS, updates and installs apps liseted in Brewfile\n"\
   "  ${C3}- On Arch Linux, updates and installs packages via Pacman\n"\
   "  ${C3}- On Debian Linux, updates and installs packages via apt get\n"\
-  "  ${C3}- On Linux desktop systems, prompt to install desktop apps via 
-Flatpak\n"\
-  "  ${C3}- Checks that OS is up-to-date and critical patches are 
-installed\n"\
+  "  ${C3}- On Linux desktop systems, prompt to install desktop apps via Flatpak\n"\
+  "  ${C3}- Checks that OS is up-to-date and critical patches are installed\n"\
   "${C2}(4) Configure system\n"\
   "  ${C3}- Setup Vim, and install / update Vim plugins via Plug\n"\
   "  ${C3}- Setup Tmux, and install / update Tmux plugins via TPM\n"\
@@ -90,10 +83,8 @@ Linux)\n"\
   "  ${C3}- Refresh current terminal session\n"\
   "  ${C3}- Print summary of applied changes and time taken\n"\
   "  ${C3}- Exit with appropriate status code\n\n"\
-  "${PURPLE}You will be prompted at each stage, before any changes are 
-made.${RESET}\n"\
-  "${PURPLE}For more info, see GitHub: 
-\033[4;35mhttps://github.com/${REPO_NAME}${RESET}"
+  "${PURPLE}You will be prompted at each stage, before any changes are made.${RESET}\n"\
+  "${PURPLE}For more info, see GitHub: \033[4;35mhttps://github.com/${REPO_NAME}${RESET}"
 }
 
 # Cleanup tasks, run when the script exits

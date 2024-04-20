@@ -1,8 +1,7 @@
 FROM alpine:latest
 
 LABEL maintainer "ThreatCode <https://threatcode.github.io>"
-LABEL org.opencontainers.image.source 
-https://github.com/threatcode/dotfiles
+LABEL org.opencontainers.image.source https://github.com/threatcode/dotfiles
 
 # Parameters
 ARG user=seamless
@@ -16,8 +15,7 @@ ARG vcsowner=threatcode
 # Install system packages, with root
 USER root
 RUN \
-  echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> 
-/etc/apk/repositories && \
+  echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
   apk upgrade --no-cache && \
   apk add --update --no-cache \
     sudo \
@@ -55,8 +53,7 @@ COPY ./ /home/${user}/.userspace/
 ENV DOTFILES_DIR="/home/${user}/.dotfiles"
 
 RUN \
-  git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} 
-${DOTFILES_DIR} && \
+  git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} ${DOTFILES_DIR} && \
   chown -R ${user}:${group} /home/${user}/.dotfiles && \
   chown -R ${user}:${group} /home/${user}/.userspace
 
@@ -72,6 +69,4 @@ CMD []
 
 ENTRYPOINT [ "/bin/zsh" ]
 
-# docker run -it --rm -w "$HOME" -v "$HOME/.userspace":/userspace -v 
-$PWD:/cwd -v $HOME/.config:/config:rw -v 
-/var/run/docker.sock:/var/run/docker.sock --network host dot-test
+# docker run -it --rm -w "$HOME" -v "$HOME/.userspace":/userspace -v $PWD:/cwd -v $HOME/.config:/config:rw -v /var/run/docker.sock:/var/run/docker.sock --network host dot-test

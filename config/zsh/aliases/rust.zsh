@@ -53,8 +53,7 @@ update_rust() {
 }
 
 # Alias for running Rust programs with Valgrind (if installed)
-alias rvalgrind='valgrind --tool=memcheck --leak-check=full 
---show-leak-kinds=all --track-origins=yes'
+alias rvalgrind='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes'
 
 # Helper to clean up target directory in all workspaces
 clean_rust_workspace() {

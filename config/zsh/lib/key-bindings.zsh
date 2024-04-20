@@ -1,10 +1,8 @@
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Builtins
-# 
-http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets
+# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets
 
-# Make sure that the terminal is in application mode when zle is active, 
-since
+# Make sure that the terminal is in application mode when zle is active, since
 # only then values from $terminfo are valid
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   function zle-line-init() {
@@ -106,15 +104,10 @@ bindkey -M viins '^[[1;5D' backward-word
 bindkey -M vicmd '^[[1;5D' backward-word
 
 
-bindkey '\ew' kill-region                             # [Esc-w] - Kill 
-from the cursor to the mark
-bindkey -s '\el' 'ls\n'                               # [Esc-l] - run 
-command: ls
-bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search 
-backward incrementally for a specified string. The string may begin with ^ 
-to anchor the search to the beginning of the line.
-bindkey ' ' magic-space                               # [Space] - don't do 
-history expansion
+bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
+bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
+bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+bindkey ' ' magic-space                               # [Space] - don't do history expansion
 
 # Edit the current command line in $EDITOR
 autoload -U edit-command-line

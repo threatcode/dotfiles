@@ -1,7 +1,6 @@
 #  ~/.zshenv
 # Core envionmental variables
-# Locations configured here are requred for all other files to be 
-correctly imported
+# Locations configured here are requred for all other files to be correctly imported
 
 # Set XDG directories
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -43,3 +42,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 export LANG='en_GB.UTF-8';
 export PYTHONIOENCODING='UTF-8';
 export LC_ALL='C';
+

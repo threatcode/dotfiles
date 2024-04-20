@@ -2,7 +2,7 @@
 " Sets up all Vim / Neovim Plugins via Vim Plug                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Installs and imports Vim Plug, updates and loads listed plugins    "
-" For more info, see docs at: https://github.com/threatcode/dotfiles "
+" For more info,see docs at: https://github.com/threatcode/dotfiles  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set paths for plug.vim and directory for plugins

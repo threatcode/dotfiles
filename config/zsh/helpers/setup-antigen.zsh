@@ -20,3 +20,4 @@ fi
 
 # Set the ZSH prompt
 antigen theme romkatv/powerlevel10k
+
